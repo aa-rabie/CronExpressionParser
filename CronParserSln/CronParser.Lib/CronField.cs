@@ -33,7 +33,6 @@ namespace CronParser.Lib
         private List<int> _values = new List<int>();
 
         const bool Success = true;
-        const bool Failure = false;
 
         public CronFieldType Type => _type;
 
@@ -84,7 +83,10 @@ namespace CronParser.Lib
                 if (CheckIfCommaSeparatedListOfValues(input)) 
                     return Success;
 
-                return Failure;
+                var errorMsg =
+                        $"Invalid Field Input: ({input}) is invalid - field type : {GetEnumName(_type)}";
+
+                throw new CronException(errorMsg);
             }
             catch (Exception e)
             {

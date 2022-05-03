@@ -2,7 +2,8 @@
   "profiles": {
     "CronParser.App": {
       "commandName": "Project",
-      "commandLineArgs": "*/15 0 1,15 * 1-5 /usr/bin/find"
+      // "commandLineArgs": "*/15 0 1,15 * 1-5 /usr/bin/find"
+      "commandLineArgs": " a b c d e f"
     }
   }
 }
