@@ -26,7 +26,7 @@ namespace CronParser.App
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{DateTime.Now} : exception thrown during execution. error : {ex.Message}");
+                Console.WriteLine($"{DateTime.Now} : exception thrown during execution. error : {ex.GetBaseException().Message}");
             }
         }
 
